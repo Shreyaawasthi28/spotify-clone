@@ -1,0 +1,187 @@
+
+:root {
+    --spotify-green: #1DB954;
+    --dark-bg: #121212; /* Background color from the image */
+    --form-bg: #282828; /* Login box background */
+    --light-grey: #a7a7a7;
+    --white-text: #ffffff;
+    --black-text: #000000;
+    --border-color: #404040; /* Border for inputs and buttons */
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+
+body {
+    background-color: var(--dark-bg);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    color: var(--white-text);
+}
+
+.login-container {
+    background-color: var(--form-bg);
+    border-radius: 8px;
+    /* Removed box-shadow to match the flat look in the screenshot */
+    width: 100%;
+    max-width: 480px; /* Adjusted max-width to match screenshot proportions */
+    padding: 40px; /* Adjusted padding */
+    text-align: center;
+}
+
+.login-header {
+    margin-bottom: 30px; /* Increased margin for logo */
+}
+
+.login-header img {
+    width: 180px; /* Spotify logo width */
+    filter: invert(1); /* Invert logo color from black to white/light grey for dark background */
+}
+
+.login-form-wrapper h2 {
+    font-size: 28px; /* Larger heading */
+    margin-bottom: 30px;
+    color: var(--white-text);
+}
+
+.social-login-options {
+    margin-bottom: 30px; /* Space below social buttons */
+}
+
+.social-button {
+    width: 100%;
+    padding: 12px 20px;
+    margin-bottom: 12px; /* Gap between buttons */
+    border: 1px solid var(--border-color);
+    border-radius: 50px; /* Pill shape */
+    background-color: transparent;
+    color: var(--white-text);
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: border-color 0.3s ease, background-color 0.3s ease;
+}
+
+.social-button:hover {
+    border-color: var(--white-text); /* Lighter border on hover */
+}
+
+.social-button i {
+    margin-right: 10px;
+    font-size: 18px;
+}
+
+/* Specific button styles (optional, for subtle branding if needed) */
+.social-button.google { /* No specific color in screenshot, keeping generic */ }
+.social-button.facebook { /* No specific color in screenshot */ }
+.social-button.apple { /* No specific color in screenshot */ }
+.social-button.phone { /* No specific color in screenshot */ }
+
+
+.divider {
+    border-top: 1px solid var(--border-color); /* Lighter divider */
+    margin: 30px 0; /* Margin above and below divider */
+}
+
+.input-group {
+    text-align: left;
+    margin-bottom: 25px; /* Increased margin below input group */
+}
+
+.input-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--white-text);
+}
+
+.input-group input {
+    width: 100%;
+    padding: 12px 15px;
+    border: 1px solid var(--border-color); /* Input border color */
+    border-radius: 5px;
+    background-color: var(--form-bg); /* Match container background */
+    color: var(--white-text);
+    font-size: 16px;
+    transition: border-color 0.3s ease;
+}
+
+.input-group input:focus {
+    outline: none;
+    border-color: var(--white-text); /* White border on focus */
+}
+
+.input-group input::placeholder {
+    color: var(--light-grey);
+}
+
+.continue-button {
+    width: 100%;
+    padding: 15px;
+    background-color: var(--spotify-green);
+    color: var(--black-text); /* Black text on green button */
+    border: none;
+    border-radius: 50px;
+    font-size: 18px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    margin-bottom: 30px; /* Space below continue button */
+}
+
+.continue-button:hover {
+    background-color: #1ed760; /* Slightly lighter green on hover */
+    transform: translateY(-2px);
+}
+
+.signup-text {
+    font-size: 16px;
+    color: var(--white-text); /* Signup text color */
+}
+
+.signup-link {
+    color: var(--white-text);
+    text-decoration: underline; /* Underline the link */
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+.signup-link:hover {
+    color: var(--spotify-green); /* Green on hover */
+}
+
+/* Responsive adjustments */
+@media (max-width: 600px) {
+    .login-container {
+        padding: 30px;
+        margin: 20px;
+    }
+
+    .login-header img {
+        width: 150px;
+    }
+
+    .login-form-wrapper h2 {
+        font-size: 24px;
+    }
+
+    .social-button,
+    .continue-button {
+        font-size: 15px;
+        padding: 12px;
+    }
+
+    .signup-text {
+        font-size: 14px;
+    }
+}
